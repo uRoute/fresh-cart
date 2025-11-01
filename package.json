@@ -34,6 +34,7 @@
     "@angular/service-worker": "^20.3.0",
     "@angular/ssr": "^20.3.0",
     "@fortawesome/fontawesome-free": "^7.0.1",
+    "@netlify/angular-runtime": "^2.0.0",
     "bootstrap": "^5.3.8",
     "express": "^5.1.0",
     "jwt-decode": "^4.0.0",
