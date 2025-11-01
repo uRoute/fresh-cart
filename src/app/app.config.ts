@@ -10,7 +10,6 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { provideToastr } from 'ngx-toastr';
 import { headerInterceptor } from './core/interceptors/header/header-interceptor';
 import { loadingInterceptor } from './core/interceptors/loading/loading-interceptor';
-import { provideServiceWorker } from '@angular/service-worker';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -20,27 +19,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(CookieService , NgxPaginationModule , NgxSpinnerModule),
     provideAnimations(),
     provideToastr(),
-    provideClientHydration(withEventReplay()), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          })
+    provideClientHydration(withEventReplay())
   ]
 };
